@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    첫번째 후보
+   
+    <form class="vote" action="{% url 'newelection' %}" method="post">
+        <p> {% csrf_token %}
+             {{ form.as_p }}
+
+    <button type="submit">제출</button>
+
+    </form>
+    
+</body>
+</html>
+
+<!--
+     return redirect('detail', new_blog.id)
+    
+def newelection(request):
+    form = ElectionForm(request.POST, request.FILES)
+    if form.is_valid():
+        new_election = form.save(commit=False)
+        new_election.save()
+    return redirect('home')
+
+
+     path('newelection/', elections.newelection, name="newelection"),
+-->

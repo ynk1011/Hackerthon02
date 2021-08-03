@@ -14,8 +14,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #url(r"^detail/(?P<pk>\w+)/$", QuestionDetail.as_view()),
     path('', home, name='home'),
-
-
     path('home/<int:pk>', posting, name="posting"),
 
 

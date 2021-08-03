@@ -74,8 +74,8 @@ urlpatterns = [
     url(r'^show_result', views.show_result),
 
     path('main/', survey.main, name="main"),
-    path('show_result/', survey.show_result, name="result"),
-    path('save_survey/', survey.save_survey, name="savesurvey"),
+    path('show_result/', survey.show_result, name="show_result"),
+    path('save_survey/', survey.save_survey, name="save_survey"),
 
 ]
 

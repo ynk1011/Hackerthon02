@@ -25,7 +25,7 @@ def show_result(request):
         select
             survey_idx, num, count(num) sum_num,
             round((select count(*) from survey_answer
-                where survey_idx=a.survey_idx and num=a.num)*100.0/
+                where survey_idx=a.survey_idx and num=a.num)*100.0 /
                 (select count(*) from survey_answer
                     where survey_idx=a.survey_idx),1) rate
         from survey_answer a
